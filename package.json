@@ -1,0 +1,31 @@
+{
+  "name": "gulp-loop-files",
+  "version": "0.0.1",
+  "description": "A gulp task for looping the file system, then calling a fuction to do additional tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "author": "Jordan Parker",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "mocha": "^2.2.0",
+    "vinyl": "^0.4.6"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rabidaudio/gulp-inline-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rabidaudio/gulp-inline-image/issues"
+  },
+  "homepage": "https://github.com/rabidaudio/gulp-inline-image"
+}
