@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rabidaudio/gulp-inline-image.git"
+    "url": "https://github.com/Cognitip/gulp-loop-files.git"
   },
   "bugs": {
-    "url": "https://github.com/rabidaudio/gulp-inline-image/issues"
+    "url": "https://github.com/Cognitip/gulp-loop-files/issues"
   },
-  "homepage": "https://github.com/rabidaudio/gulp-inline-image"
+  "homepage": "https://github.com/Cognitip/gulp-loop-files"
 }

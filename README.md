@@ -2,6 +2,8 @@
 
 A [Gulp](http://gulpjs.com) task for looping through a gulp project and calling a task on each item. Inspired by gulp-inline-image-html.
 
+Hacked from [gulp-inline-image](https://github.com/rabidaudio/gulp-inline-image)
+
 ### Usage
 
 ```javascript
