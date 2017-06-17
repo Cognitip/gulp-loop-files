@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "gulp-util": "^3.0.4",
-    "through2": "^0.6.5"
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "chai": "^2.1.1",
-    "mocha": "^2.2.0",
-    "vinyl": "^0.4.6"
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "vinyl": "^2.0.2"
   },
   "directories": {
     "test": "test"
