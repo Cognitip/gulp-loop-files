@@ -1,0 +1,16 @@
+branches:
+    only:
+    - greenkeeper/initial
+    - master
+
+language:
+    - node_js
+node_js:
+    - 7
+    - 6
+    # - node
+script:
+    - npm run build-ci
+# http://docs.travis-ci.com/user/workers/container-based-infrastructure
+sudo:
+    false
