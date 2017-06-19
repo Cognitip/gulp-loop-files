@@ -6,16 +6,29 @@ const PLUGIN_NAME = 'gulp-loop-files';
 
 function loopFileSystem(dir, fn) {
   var stream = through.obj(function(file, enc, cb) {
-    if (file.isStream()) {
-      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams not supported!'));
-      return cb();
+    if (file.isNull()) {
+        // nothing to do
+        return cb(null, file);
     }
+    if (file.isStream()) {
+        // file.contents is a Stream - https://nodejs.org/api/stream.html
+        this.emit('error', new PluginError(PLUGIN_NAME, 'Streams not supported!'));
+
+        // or, if you can handle Streams:
+        //file.contents = file.contents.pipe(...
+        //return callback(null, file);
+    }
+
     // only work on buffer
     if (file.isBuffer()) {
-      file.contents = fn({file: file.contents, directory: dir});
-      this.push(file);
-      return cb();
+      var self = this
+
+      return fn(file.contents, dir, function(response) {
+        file.contents = response
+        return cb(null, file);
+      })
     }
+
     return cb(null, file); //no-op
   });
 
