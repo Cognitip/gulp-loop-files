@@ -1,5 +1,5 @@
 {
-  "name": "gulp-loop-files",
+  "name": "gulp-lqip",
   "version": "0.0.1",
   "description": "A gulp task for looping the file system, then calling a fuction to do additional tasks",
   "main": "index.js",
