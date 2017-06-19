@@ -26,7 +26,9 @@ function inliner(html, base, res) {
   imgs.each(function(_idx, el) {
     el = dom(el) // Convert string 'el' to cheerio object
     var src = el.attr('src') // select the src of image
-    promises.push(encodeImage(src, el, base))
+    if (src && isLocal(src)) {
+      promises.push(encodeImage(src, el, base))
+    }
   })
 
   Promise.all(promises).then(data => {
